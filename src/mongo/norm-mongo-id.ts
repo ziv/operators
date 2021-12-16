@@ -1,6 +1,7 @@
 import { map, Observable, pipe, UnaryFunction } from 'rxjs';
 import { ObjectId } from 'mongodb';
 
+// todo fix types to match the idKey input
 type Input<T> = T & { _id?: string | ObjectId };
 type Output<T> = T | (T & { _id?: ObjectId });
 
@@ -9,13 +10,13 @@ export type NormMongoId<T> = UnaryFunction<
   Observable<Output<T>>
 >;
 
-export function normMongoId$<T>(): NormMongoId<T> {
+export function normMongoId$<T>(idKey = '_id'): NormMongoId<T> {
   return pipe(
     map((input: Input<T>) =>
-      input._id && typeof input._id === 'string'
+      input[idKey] && typeof input[idKey] === 'string'
         ? {
             ...input,
-            _id: new ObjectId(input._id)
+            [idKey]: new ObjectId(input[idKey])
           }
         : input
     )

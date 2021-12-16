@@ -16,6 +16,7 @@ describe('norm-mongo-id', () => {
   it('should keep existing mongo id', done => {
     const _id = new ObjectId();
     const input = { name: 'test', _id };
+    console.log(input);
     of(input)
       .pipe(normMongoId$())
       .subscribe(output => {
@@ -31,6 +32,16 @@ describe('norm-mongo-id', () => {
       .pipe(normMongoId$())
       .subscribe(output => {
         expect(output._id).toBeInstanceOf(ObjectId);
+        done();
+      });
+  });
+
+  it('should convert string to mongo id with different key', done => {
+    const input = { name: 'test', id: new ObjectId().toString() };
+    of(input)
+      .pipe(normMongoId$('id'))
+      .subscribe(output => {
+        expect(output.id).toBeInstanceOf(ObjectId);
         done();
       });
   });

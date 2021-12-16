@@ -1,7 +1,7 @@
 {
   "name": "@xpr/operators",
-  "version": "0.0.1",
-  "description": "Collection of my RxJS operators",
+  "version": "0.0.0-development",
+  "description": "Collection of rxjs operators",
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "tsc --build tsconfig.build.json",
@@ -9,11 +9,12 @@
     "format": "eslint --fix src/**/*.ts && prettier --write src/**/*.ts",
     "lint": "eslint",
     "test": "jest",
-    "coverage": "jest --ci --coverage && codecov"
+    "coverage": "jest --ci --coverage && codecov",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ziv/operators.git"
+    "url": "https://github.com/ziv/operators.git"
   },
   "publishConfig": {
     "access": "public"
@@ -70,5 +71,8 @@
     "ts-jest": "^27.1.1",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "semantic-release": "^18.0.1"
   }
 }

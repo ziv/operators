@@ -1,7 +1,8 @@
 import { ClassConstructor, plainToClass } from 'class-transformer';
-import { map, Observable, pipe, UnaryFunction } from 'rxjs';
+import { map, pipe } from 'rxjs';
+import { Operator } from '../types';
 
-export type ToType<T> = UnaryFunction<Observable<unknown>, Observable<T>>;
+export type ToType<T> = Operator<unknown, T>;
 
 export function toType$<T>(type: ClassConstructor<T>): ToType<T> {
   return pipe(

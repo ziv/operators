@@ -1,10 +1,8 @@
 import { validate, ValidationError } from 'class-validator';
-import { mergeMap, Observable, pipe, UnaryFunction } from 'rxjs';
+import { mergeMap, pipe } from 'rxjs';
+import { Operator } from '../types';
 
-export type Validate = UnaryFunction<
-  Observable<object>,
-  Observable<ValidationError[]>
->;
+export type Validate = Operator<object, ValidationError[]>;
 
 export function validate$(): Validate {
   return pipe(mergeMap((value: object) => validate(value)));

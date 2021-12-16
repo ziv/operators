@@ -22,7 +22,7 @@ Run validation and return a list of errors.
 
 ```typescript
 import { IsNumber } from 'class-validator';
-import validate$ from '@xpr/operators/validate';
+import validate$ from '@xpr/operators/validators/validate';
 
 const point = new Point();
 point.x = 1;
@@ -39,7 +39,7 @@ Run validation and reject on errors.
 
 ```typescript
 import { IsNumber } from 'class-validator';
-import validate$ from '@xpr/operators/validate';
+import validate$ from '@xpr/operators/validators/validate-or-reject';
 
 const point = new Point();
 point.x = 1;

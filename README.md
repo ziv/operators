@@ -7,3 +7,8 @@ Most of them are a simple composition of existing operators.
 ```shell
 $ npm install @xpr/operators
 ```
+
+## Usage
+* [mongo](src/mongo/readme.md)
+* [transform](src/transformers/readme.md)
+* [validate](src/validators/readme.md)

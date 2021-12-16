@@ -1,10 +1,8 @@
 import { validateOrReject } from 'class-validator';
-import { mergeMap, Observable, pipe, UnaryFunction } from 'rxjs';
+import { mergeMap, pipe } from 'rxjs';
+import { Operator } from '../types';
 
-export type ValidateOrReject<T> = UnaryFunction<
-  Observable<object>,
-  Observable<T>
->;
+export type ValidateOrReject<T> = Operator<object, T>;
 
 export function validateOrReject$<T>(): ValidateOrReject<T> {
   return pipe(

@@ -1,7 +1,7 @@
 {
   "name": "@xpr/operators",
   "version": "0.0.0-development",
-  "description": "Collection of rxjs operators",
+  "description": "rxjs operators collection",
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "tsc --build tsconfig.build.json",
@@ -71,8 +71,5 @@
     "ts-jest": "^27.1.1",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5"
-  },
-  "devDependencies": {
-    "semantic-release": "^18.0.1"
   }
 }

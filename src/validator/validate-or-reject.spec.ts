@@ -1,25 +1,24 @@
+import { IsInt, ValidationError } from 'class-validator';
+import { of } from 'rxjs';
 import validateOrReject$ from './validate-or-reject';
 
 describe('validateOrReject', () => {
-  const operator = validateOrReject$();
-  it('should return a promise', () => {
-    expect(operator).toBeTruthy();
+  class TestClass {
+    @IsInt()
+    public property: number;
+  }
+
+  it('should reject validation', done => {
+    const input = new TestClass();
+    input.property = 'number' as unknown as number;
+
+    of(input)
+      .pipe(validateOrReject$())
+      .subscribe({
+        error(e) {
+          expect(e[0]).toBeInstanceOf(ValidationError);
+          done();
+        }
+      });
   });
-  //
-  // it('should resolve if the validation passes', async () => {
-  //   const promise = validateOrReject(() => true);
-  //   await expect(promise).resolves.toBeUndefined();
-  // });
-  //
-  // it('should reject if the validation fails', async () => {
-  //   const promise = validateOrReject(() => false);
-  //   await expect(promise).rejects.toBeInstanceOf(Error);
-  // });
-  //
-  // it('should reject if the validation throws an error', async () => {
-  //   const promise = validateOrReject(() => {
-  //     throw new Error('test');
-  //   });
-  //   await expect(promise).rejects.toBeInstanceOf(Error);
-  // });
 });

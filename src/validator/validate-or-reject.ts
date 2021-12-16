@@ -1,13 +1,16 @@
 import { validateOrReject } from 'class-validator';
 import { mergeMap, Observable, pipe, UnaryFunction } from 'rxjs';
 
-type Obj = Record<string, unknown>;
+export type ValidateOrReject<T> = UnaryFunction<
+  Observable<object>,
+  Observable<T>
+>;
 
-export type ValidateOrReject<T> = UnaryFunction<Observable<T>, Observable<T>>;
-
-export function validateOrReject$<T extends Obj>(): ValidateOrReject<T> {
+export function validateOrReject$<T>(): ValidateOrReject<T> {
   return pipe(
-    mergeMap((value: T) => validateOrReject(value).then(() => value))
+    mergeMap((value: object) =>
+      validateOrReject(value).then(() => value as unknown as T)
+    )
   );
 }
 

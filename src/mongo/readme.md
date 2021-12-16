@@ -1,4 +1,4 @@
-# @xpr/operators/mongo
+# mongo
 
 ## normMongoId$
 Convert MongoDB string to a MongoDB ObjectId.

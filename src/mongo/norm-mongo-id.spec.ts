@@ -16,7 +16,6 @@ describe('norm-mongo-id', () => {
   it('should keep existing mongo id', done => {
     const _id = new ObjectId();
     const input = { name: 'test', _id };
-    console.log(input);
     of(input)
       .pipe(normMongoId$())
       .subscribe(output => {

@@ -15,3 +15,12 @@ $ npm install @xpr/operators
 * [mongo](src/mongo/readme.md)
 * [transform](src/transformers/readme.md)
 * [validate](src/validators/readme.md)
+
+
+Enjoy!
+
+
+---
+![xpr-swiss-knife](https://badgen.net/github/license/ziv/swiss-knife)
+![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg)
+![@xpr](https://badgen.net/badge/powered%20by/@xpr/pink)

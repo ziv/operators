@@ -1,7 +1,10 @@
 # operators
 
-Collection of [rxjs](https://rxjs.dev/) operators. 
-Most of them are a simple composition of existing operators.
+[![CI](https://github.com/ziv/operators/actions/workflows/main.yml/badge.svg)](https://github.com/ziv/operators/actions/workflows/main.yml)
+[![CI](https://github.com/ziv/operators/actions/workflows/main.yml/badge.svg)](https://github.com/ziv/operators/actions/workflows/main.yml)
+
+
+Collection of [rxjs](https://rxjs.dev/) operators.
 
 ## Installation
 ```shell

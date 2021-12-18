@@ -1,7 +1,7 @@
 # mongo
 
 ## normMongoId$
-Convert MongoDB string to a MongoDB ObjectId.
+Convert MongoDB id string to a MongoDB `ObjectId`.
 
 ```typescript
 import { of } from 'rxjs';

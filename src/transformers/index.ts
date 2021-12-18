@@ -1,1 +1,1 @@
-export { toType$ } from './to-type';
+export { toType$, ToType } from './to-type';

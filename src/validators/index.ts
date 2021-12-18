@@ -1,2 +1,2 @@
-export { validate$ } from './validate';
-export { validateOrReject$ } from './validate-or-reject';
+export { validate$, Validate } from './validate';
+export { validateOrReject$, ValidateOrReject } from './validate-or-reject';

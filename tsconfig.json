@@ -22,5 +22,12 @@
       "jest"
     ],
     "baseUrl": "src"
+  },
+  "typedocOptions": {
+    "entryPoints": [
+      "src/mongo/index.ts",
+      "src/transformers/index.ts",
+      "src/validators/index.ts"
+    ]
   }
 }

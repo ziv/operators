@@ -1,3 +1,4 @@
+// @module types
 import { Observable, UnaryFunction } from 'rxjs';
 
 export type Operator<Input, Output> = UnaryFunction<

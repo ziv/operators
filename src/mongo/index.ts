@@ -1,1 +1,1 @@
-export { normMongoId$ } from './norm-mongo-id';
+export { normMongoId$, NormMongoId } from './norm-mongo-id';

@@ -25,9 +25,11 @@
   },
   "typedocOptions": {
     "entryPoints": [
+      "src/types/index.ts",
       "src/mongo/index.ts",
       "src/transformers/index.ts",
-      "src/validators/index.ts"
+      "src/validators/index.ts",
+      "src/filters/index.ts"
     ]
   }
 }

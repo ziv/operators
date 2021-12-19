@@ -12,13 +12,16 @@ describe('not-empty', () => {
       });
   });
 
-  it('should not pass empty values', () => {
+  it('should not pass empty values', done => {
     const test: any[] = [];
     of([1, null, 2, undefined])
       .pipe(notEmpty$())
       .subscribe({
         next: value => test.push(value),
-        complete: () => expect(test.length).toEqual(2)
+        complete: () => {
+          expect(test.length).toEqual(2);
+          done();
+        }
       });
   });
 });

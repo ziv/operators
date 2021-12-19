@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/ziv/operators/compare/v1.0.0...v1.1.0) (2021-12-19)
+
+
+### Bug Fixes
+
+* test with async ([2cf1711](https://github.com/ziv/operators/commit/2cf1711f514a1c9c9a5b6d7808a2c4027736f427))
+
+
+### Features
+
+* not-empty operator ([#7](https://github.com/ziv/operators/issues/7)) ([90d577c](https://github.com/ziv/operators/commit/90d577c05857a4437bf455c34234a218f37d2d1e))
+
 # 1.0.0 (2021-12-16)
 
 

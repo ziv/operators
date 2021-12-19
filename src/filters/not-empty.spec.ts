@@ -14,11 +14,11 @@ describe('not-empty', () => {
 
   it('should not pass empty values', () => {
     const test: any[] = [];
-    of([1, null, 2])
+    of([1, null, 2, undefined])
       .pipe(notEmpty$())
       .subscribe({
         next: value => test.push(value),
-        complete: () => expect(test).toEqual([1, 2])
+        complete: () => expect(test.length).toEqual(2)
       });
   });
 });

@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/ziv/operators/compare/v1.1.1...v1.1.2) (2021-12-20)
+
+
+### Bug Fixes
+
+* restore checkout build ([6c06508](https://github.com/ziv/operators/commit/6c065086b51819da2c3cff33db57206ff75db963))
+
 ## [1.1.1](https://github.com/ziv/operators/compare/v1.1.0...v1.1.1) (2021-12-20)
 
 

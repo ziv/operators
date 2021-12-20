@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ziv/operators/compare/v1.1.0...v1.1.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* types and build ([73f1557](https://github.com/ziv/operators/commit/73f1557a25b7032991d3a7d7715748a4c6a4e111))
+
 # [1.1.0](https://github.com/ziv/operators/compare/v1.0.0...v1.1.0) (2021-12-19)
 
 

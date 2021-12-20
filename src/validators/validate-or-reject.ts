@@ -1,18 +1,23 @@
 // @module validators/validate-or-reject
 import { validateOrReject } from 'class-validator';
-import { mergeMap, pipe } from 'rxjs';
-import { Operator } from '../types';
+import {
+  mergeMap,
+  ObservableInput,
+  ObservedValueOf,
+  OperatorFunction
+} from 'rxjs';
 
-export type ValidateOrReject<T> = Operator<object, T>;
+export type ValidateOrReject<T extends object> = OperatorFunction<
+  T,
+  ObservedValueOf<ObservableInput<T>>
+>;
 
 /**
  * Validates the given object or rejects it with the given error.
  */
-export function validateOrReject$<T>(): ValidateOrReject<T> {
-  return pipe(
-    mergeMap((value: object) =>
-      validateOrReject(value).then(() => value as unknown as T)
-    )
+export function validateOrReject$<T extends object>(): ValidateOrReject<T> {
+  return mergeMap<T, ObservableInput<T>>(value =>
+    validateOrReject(value).then(() => value)
   );
 }
 

@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       - name: codecove
         uses: codecov/codecov-action@v2
       - name: Install Node
@@ -36,7 +36,7 @@ jobs:
           node-version: 'lts/*'
       - name: Install Dependencies
         run: npm ci
-      - name: Run Tests 👩🏽‍💻
+      - name: Run Coverage 👩🏽‍💻
         run: npm run coverage
 
   Lint:

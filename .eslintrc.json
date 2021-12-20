@@ -15,9 +15,10 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "prettier"
+        "prettier",
+        "import"
     ],
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "warn"
     }
 }

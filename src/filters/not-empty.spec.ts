@@ -13,7 +13,7 @@ describe('not-empty', () => {
   });
 
   it('should not pass empty values', done => {
-    const test: any[] = [];
+    const test: unknown[] = [];
     of(1, null, 2, undefined)
       .pipe(notEmpty$())
       .subscribe({

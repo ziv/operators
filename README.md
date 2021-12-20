@@ -13,6 +13,7 @@ $ npm install @xpr/operators
 ```
 
 ## Usage
+* [filters](src/filters/readme.md)
 * [mongo](src/mongo/readme.md)
 * [transform](src/transformers/readme.md)
 * [validate](src/validators/readme.md)
